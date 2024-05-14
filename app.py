@@ -1,10 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask
 
-app = Flask(__name__)
+app = Flask(__name__)  # Removed space between Flask and ()
 
 @app.route('/')
-def index():
-	return render_template('inde.html')
+def home():
+    return "Hello, World!"
 
 if __name__ == '__main__':
-	app.run(debug=True)
+    app.run()
